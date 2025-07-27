@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Employee Productivity Prediction Using ML</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: #eee;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    @keyframes slideFade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(10px);
+      padding: 20px 40px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 0 20px rgba(0,255,200,0.2);
+    }
+
+    nav span {
+      font-size: 26px;
+      font-weight: bold;
+      color: #00ffee;
+      text-shadow: 0 0 12px #00ffee;
+    }
+
+    nav a {
+      color: #000;
+      background: linear-gradient(45deg, #ff00cc, #3333ff);
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s ease;
+      box-shadow: 0 0 12px #ff00cc66;
+    }
+
+    nav a:hover {
+      background: #00ffee;
+      color: #000;
+      box-shadow: 0 0 20px #00ffee99;
+      transform: scale(1.05);
+    }
+
+    .container {
+      padding-top: 120px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      animation: slideFade 1s ease-in;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-weight: 900;
+      font-family: 'Playfair Display', serif;
+      color: #ff00cc;
+      text-shadow: 0 0 15px #ff00cc99;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 30px;
+      margin: 30px auto;
+      box-shadow: 0 0 30px rgba(255,255,255,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 40px #ff00cc44;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #00ffee;
+      text-shadow: 0 0 8px #00ffee80;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin-top: 10px;
+      }
+
+      .container {
+        padding: 90px 20px 40px 20px;
+      }
+
+      .section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <span>Employee Productivity Prediction Using ML</span>
+    <div>
+      <a href="./">Home</a>
+      <a href="./predict">Predict</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>About Me</h1>
+
+    <div class="section">
+      <h2>✨ Who I Am</h2>
+      <p>
+        Hello there! I’m <b>Bhumika Pandey</b>, a data explorer and machine learning enthusiast on a quest to bridge technology and human performance. My current passion project — <strong>Employee Productivity Prediction Using ML</strong> — dives deep into understanding how intelligent systems can empower teams and boost workplace efficiency.
+      </p>
+      <p>
+        From crunching numbers to crafting sleek interfaces, I thrive on building solutions that solve meaningful problems. My goal? To make data not just readable, but truly relatable.
+      </p>
+      <p>
+        Outside the terminal, I enjoy catching cricket matches, experimenting with new tech, and sipping endless cups of chai ☕.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
