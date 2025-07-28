@@ -52,14 +52,43 @@ def predict():
               float(idle_time), int(idle_men), int(no_of_style_change), float(no_of_workers), int(month)]]
 
     # Prediction and message
-    prediction = model.predict(total)[0]
-    if prediction <= 0.3:
-        category = 'The employee is Averagely Productive.'
-    elif prediction <= 0.8:
-        category = 'The employee is Medium Productive.'
-    else:
-        category = 'The employee is Highly Productive.'
+    # prediction = model.predict(total)[0]
+    # if prediction <= 0.3:
+    #     category = 'The employee is Averagely Productive.'
+    # elif prediction <= 0.8:
+    #     category = 'The employee is Medium Productive.'
+    # else:
+    #     category = 'The employee is Highly Productive.'
     
+    # result_text = f"{category} (Prediction Score: {prediction * 100:.2f}%)"
+    
+    # Prediction and message
+#     # Prediction and message
+# prediction = model.predict(total)[0]
+
+# # Clamp the prediction between 0 and 1
+# prediction = max(0, min(prediction, 1))
+
+# if prediction <= 0.3:
+#     category = 'The employee is Averagely Productive.'
+# elif 0.3 < prediction <= 0.8:
+#     category = 'The employee is Medium Productive.'
+# else:
+#     category = 'The employee is Highly Productive.'
+
+# result_text = f"{category} (Prediction Score: {prediction * 100:.2f}%)"
+
+    raw_pred = model.predict(total)[0]
+    
+    prediction = 1 / (1 + np.exp(-raw_pred))
+
+    if prediction <= 0.3:
+       category = 'The employee is Averagely Productive.'
+    elif 0.3 < prediction <= 0.8:
+       category = 'The employee is Medium Productive.'
+    else:
+       category = 'The employee is Highly Productive.'
+
     result_text = f"{category} (Prediction Score: {prediction * 100:.2f}%)"
 
     
