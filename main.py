@@ -60,9 +60,9 @@ def predict():
     else:
         category = 'The employee is Highly Productive.'
     
-    # Combine prediction message + score
-    result_text = f"{category} (Prediction Score:96.34%)"
+    result_text = f"{category} (Prediction Score: {prediction * 100:.2f}%)"
 
+    
     # Graph generation
     graphs = []
     def create_plot():
